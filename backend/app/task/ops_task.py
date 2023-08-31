@@ -17,7 +17,12 @@ class OpsTask(Task):
     async def sometask(self):
        
         #print(f"{self.task_name} ")
-        await sleep(3)
+        i=0
+        while(True):
+            await sleep(1)
+            i+=1
+            print(f"processing:{i}")
+        
         print(f"========task ({self.task_name}) finished==========")
         return 
 
